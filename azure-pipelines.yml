@@ -1,4 +1,13 @@
 # Starter pipeline
+- task: Ansible@0
+  inputs:
+    ansibleInterface: 'remoteMachine'
+    connectionOverSsh: 'SSH to Ansible server'
+    playbookSourceRemoteMachine: 'ansibleMachine'
+    playbookPathAnsibleMachineOnRemoteMachine: '/etc/ansible/rg.yaml'
+    inventoriesRemoteMachine: 'noInventory'
+    sudoEnabled: true
+    sudoUser: 'saran'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
