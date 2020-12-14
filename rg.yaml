@@ -1,0 +1,9 @@
+---
+
+ - name: Create RG using poweshell
+   hosts: 10.2.0.16
+   vars:
+    ansible_python_interpreter: /usr/bin/python3
+   tasks:
+      - name: saran
+        script: /etc/ansible/myscriptv1.1.ps1 
